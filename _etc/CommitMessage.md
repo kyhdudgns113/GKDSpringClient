@@ -1,1 +1,1 @@
-26.11.16 :tada: [Client] 프로젝트 생성
+26.11.16 :tada: [Client] 리액트 앱 typescript 버전으로 변경
