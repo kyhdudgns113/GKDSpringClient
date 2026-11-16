@@ -1,5 +1,5 @@
-import {getServerUrl} from './_getServerUrl'
-import {_handleResponse} from './_handleResponse'
+import {getServerUrl} from './_fetchUtil'
+import {handleResponse} from './_fetchUtil'
 
 import * as CS from '@commonSecret'
 import * as U from '@util'
@@ -11,7 +11,7 @@ const postOrPut_NoJWT = (methodName: string) => (path: string, data: object) => 
     body: JSON.stringify(data),
   })
     .then(res => res.json())
-    .then(_handleResponse)
+    .then(handleResponse)
 }
 
 const postOrPut_WithJWT = (methodName: string) => async (path: string, data: object) => {
@@ -32,7 +32,7 @@ const postOrPut_WithJWT = (methodName: string) => async (path: string, data: obj
     body: JSON.stringify(data),
   })
     .then(res => res.json())
-    .then(_handleResponse)
+    .then(handleResponse)
 }
 
 export const post = postOrPut_NoJWT('POST')

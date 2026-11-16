@@ -1,5 +1,5 @@
-import {getServerUrl} from './_getServerUrl'
-import {_handleResponse} from './_handleResponse'
+import {getServerUrl} from './_fetchUtil'
+import {handleResponse} from './_fetchUtil'
 
 import * as CS from '@commonSecret'
 import * as U from '@util'
@@ -7,7 +7,7 @@ import * as U from '@util'
 const getOrDel_NoJWT = (methodName: string) => (path: string) => {
   return fetch(getServerUrl(path), {method: methodName})
     .then(res => res.json())
-    .then(_handleResponse)
+    .then(handleResponse)
 }
 
 const getOrDel_WithJWT = (methodName: string) => async (path: string) => {
@@ -24,7 +24,7 @@ const getOrDel_WithJWT = (methodName: string) => async (path: string) => {
     headers: {Authorization: jwtFromClient},
   })
     .then(res => res.json())
-    .then(_handleResponse)
+    .then(handleResponse)
 }
 
 export const get = getOrDel_NoJWT('GET')

@@ -25,6 +25,8 @@
     /* Paths */
     "paths": {
       "@commonSecret": [ "./src/base/common/secret" ],
+      "@context": [ "./src/manager/contexts" ],
+
       "@fetch": [ "./src/base/fetch" ],
       "@httpRequest": [ "./src/base/common/http/request" ],
       "@httpResponse": [ "./src/base/common/http/response" ],
@@ -32,6 +34,8 @@
       "@localSecret": [ "./src/base/secret" ],
       "@localType": [ "./src/base/types/localTypes" ],
       "@prop": [ "./src/base/types/props" ],
+
+      "@redux": [ "./src/manager/redux" ],
       "@util": [ "./src/base/utils" ]
     }
   },
