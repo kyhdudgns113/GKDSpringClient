@@ -1,1 +1,1 @@
-26.11.16 :tada: [Client] 리액트 앱 typescript 버전으로 변경
+26.11.16 :sparkles: [Client] 기초 코드들 작성
